@@ -2,6 +2,7 @@
 
 ### 1.Comprobación de clves SSH existentes
 En primer lugar comprobamos si hay claves existentes.
+
 1.Abrimos git bash.
 
 2.Nos dirigimos a la la carpeta oculta ~/.ssh para ver si existen las claves.
@@ -16,7 +17,8 @@ En primer lugar comprobamos si hay claves existentes.
 4.Si nos indica que ~/.ssh no existe o dentro de esta no se encuentran las claves deberemos generar una nueva clave SSH.
 
 ### 2.Generar una nueva clave SSH 
-    1.Abrimos git bash.
+    
+1.Abrimos git bash.
 
 2.Escribimos lo siguiente, teniendo encuenta que debes poner tu correo de GitHub.
 
