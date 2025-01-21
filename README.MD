@@ -7,10 +7,10 @@ En primer lugar comprobamos si hay claves existentes.
 
 2.Nos dirigimos a la la carpeta oculta ~/.ssh para ver si existen las claves.
 
-    '''bash
+    ```bash
     ls -al ~/.ssh
     #Nos deberia mostrar las claves
-    '''
+    ```
 
 3.Dentro del directorio nos deberia mostrar algo como esto (id_ed25519 | id_ed25519.pub) si nuestras claves ssh existen.
 
