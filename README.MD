@@ -7,10 +7,10 @@ En primer lugar comprobamos si hay claves existentes.
 
 2.Nos dirigimos a la la carpeta oculta ~/.ssh para ver si existen las claves.
 
-'''bash
+```bash
     ls -al ~/.ssh
     #Nos deberia mostrar las claves
-'''
+```
 
 3.Dentro del directorio nos deberia mostrar algo como esto (id_ed25519 | id_ed25519.pub) si nuestras claves ssh existen.
 
@@ -22,13 +22,13 @@ En primer lugar comprobamos si hay claves existentes.
 
 2.Escribimos lo siguiente, teniendo encuenta que debes poner tu correo de GitHub.
 
-    '''bash
+    ```bash
         ssh-keygen -t ed25519 -C "your_email@example.com"
-    '''
+    ```
 
 Esto nos deberia devolver algo como esto, debermos dar enter a lo que nos pregunta:
 
-    '''bash
+    ```bash
         Generating public/private ed25519 key pair.
         Enter file in which to save the key (/c/Users/YOU/.ssh/id_edXXXXX):
         Created directory '/c/Users/YOU/.ssh'.
@@ -50,31 +50,31 @@ Esto nos deberia devolver algo como esto, debermos dar enter a lo que nos pregun
         |     . o .       |
         |      o..        |
         +----[XXXXX]-----+
-    '''
+    ```
 
 ### 3.Agragar las claves SSH al ssh-agent
 1.En una ventana de PowerSell ejecutada como administrador ejecutaremos lo siguiente.
 
-    '''bash
+    ```bash
         Get-Service -Name ssh-agent | Set-Service -StartupType Manual
         Start-Service ssh-agent
-    '''
+    ```
 
 2.Luego agregaremos la clave al aah-agent ejecutando lo siguiente:
 
-    '''bash
+    ```bash
         ssh-add c:/Users/YOU/.ssh/id_ed25519
-    '''
+    ```
 
 3.Procederemos a agregar nuestra clave publica a GitHub
 
 ### 4.Agregar nuestra clave publica a GitHub
 1.Copiamos la clave publica en el portapapeles
 
-    '''bash
+    ```bash
         cat ~/.ssh/id_ed25519.pub | clip
         #Copiamos lo que nos devuelve por pantalla
-    '''
+    ```
 2.En la esquina superior izquierda en GitHub hacemos clic en la foto de perfil y hacemos clic en **Configuración**
 
 3.En la seccion de "Acceso" hacemos clic en **Claves SSH y GPG**
